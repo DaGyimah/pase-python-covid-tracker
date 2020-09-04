@@ -3,11 +3,13 @@ import requests as http
 import csv
 from io import StringIO
 import datetime
+from flask_cors import CORS
 
 from lib.countries import countries
 from lib.date import getDate
 
 app = Flask(__name__)
+CORS(app)
 
 base_url = "https://github.com/CSSEGISandData/COVID-19/raw/master/csse_covid_19_data/csse_covid_19_daily_reports/"
 
